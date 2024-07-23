@@ -1,0 +1,572 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>nanoFramework.Hardware.Esp32.Rmt</name>
+    </assembly>
+    <members>
+        <member name="T:nanoFramework.Hardware.Esp32.Rmt.ChannelMode">
+            <summary>
+            RMT Channel Mode Enum.
+            </summary>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.ChannelMode.Receive">
+            <summary>
+            The <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannel"/> is in Receive mode.
+            </summary>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.ChannelMode.Transmit">
+            <summary>
+            The <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannel"/> is in transmission mode.
+            </summary>
+        </member>
+        <member name="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel">
+            <summary>
+            A class that can be used to Receive RMT items on ESP32
+            </summary>
+            <remarks>
+            For detailed explanation of ESP32 RMT Module, please check the Espressif official documentation here: https://docs.espressif.com/projects/esp-idf/en/v4.4.3/esp32/api-reference/peripherals/rmt.html
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.Mode">
+            <inheritdoc/>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.IdleThreshold">
+            <summary>
+            Gets or sets the idle threshold after which the receiver will go into idle mode 
+            and <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtCommand"/>s are copied into the ring buffer and availble to your code. This is measured by number of clock ticks (after applying the clock divider).
+            </summary>
+            <remarks>
+            The receive process finishes(goes idle) when no edges have been detected for the specified <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.IdleThreshold"/> clock cycles.
+            Supported value range between 1 and 65535 (0xFFFF).
+            The RMT Module's clock ticks at a rate of 80Mhz. If the <see cref="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.ClockDivider"/> is set to 80 for example, then a clock tick is equal to 1 microsecond (80Mhz / 80 = 1Mhz = 1us).
+            So setting this property to a value of 200 means the threshold is 200us.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.EnableFilter">
+            <summary>
+            Gets or sets a value indicating if the the filter is enabled. 
+            If enabled, the receiver will ignore pulses with widths (in clock ticks) shorter than specified in <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.FilterThreshold"/>.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.FilterThreshold">
+            <summary>
+            Gets or sets the threshold, in clock ticks, of the filter.
+            when <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.EnableFilter"/> is set to <see langword="true"/> It will ignore pulses shorter than the specified threshold.
+            The acceptable range of values is 0 to 255 clock ticks.
+            </summary>
+            <remarks>
+            Example:
+            If the <see cref="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.ClockDivider"/> is set to 80 then the clock (80Mhz) will tick at a rate of 1Mhz (80Mhz / 80 = 1Mhz) making each clock tick equal to 1 microsecond.
+            Therefore, setting <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.FilterThreshold"/> to a value like 100 will cause the receiver channel to ignore any pulses that are shorter than 100 microseconds.
+            </remarks>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.#ctor(nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel"/> class.
+            </summary>
+            <param name="settings">The channel settings to use.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="settings"/> cannot be null.</exception>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.Start(System.Boolean)">
+            <summary>
+            Start receiving data on channel.
+            </summary>
+            <param name="clearBuffer">Clears buffer before starting.</param>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.Stop">
+            <summary>
+            Stop receiving data on channel.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.GetAllItems">
+            <summary>
+            Get all RmtCommand items available.
+            </summary>
+            <remarks>If no signal received in time-out period then empty array will be returned.</remarks>
+            <returns>Return array of RMTCommand. <br/>
+            If no signal received in time-out period then empty array will be returned.
+            </returns>
+        </member>
+        <member name="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings">
+            <summary>
+            <see cref="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel"/>'s settings class.
+            </summary>
+            <remarks>
+            All changes made to properties of this class are ignored after the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel"/> is initialized.
+            The equivalent properties in the channel instance can be used to make on-the-fly changes to the configurations.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.IdleThreshold">
+            <summary>
+            Gets or sets the idle threshold after which the receiver will go into idle mode 
+            and <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtCommand"/>s are copied into the ring buffer and availble to your code. This is measured by number of clock ticks (after applying the clock divider).
+            </summary>
+            <remarks>
+            The receive process finishes(goes idle) when no edges have been detected for the specified <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.IdleThreshold"/> clock cycles.
+            Supported value range between 1 and 65535 (0xFFFF).
+            The RMT Module's clock ticks at a rate of 80Mhz. If the <see cref="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.ClockDivider"/> is set to 80 for example, then a clock tick is equal to 1 microsecond (80Mhz / 80 = 1Mhz = 1us).
+            So setting this property to a value of 200 means the threshold is 200us.
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">Value cannot be set to 0 or less</exception>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.EnableFilter">
+            <summary>
+            Gets or sets the filter state. 
+            If enabled, the receiver will ignore pulses with widths less than specified in <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.FilterThreshold"/>.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.FilterThreshold">
+            <summary>
+            Gets or sets the threshold, in clock ticks, of the filter.
+            when <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.EnableFilter"/> is set to <see langword="true"/> It will ignore pulses shorter than the specified threshold.
+            The acceptable range of values is 0 to 255 clock ticks.
+            </summary>
+            <remarks>
+            Example:
+            If the <see cref="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.ClockDivider"/> is set to 80 then the clock (80Mhz) will tick at a rate of 1Mhz (80Mhz / 80 = 1Mhz) making each clock tick equal to 1 microsecond.
+            Therefore, setting <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.FilterThreshold"/> to a value like 100 will cause the receiver channel to ignore any pulses that are shorter than 100 microseconds.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.ReceiveTimeout">
+            <summary>
+            Gets or sets the timeout threshold for the <see cref="M:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannel.GetAllItems"/> call. Defaults to 1 second.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.EnableDemodulation">
+            <summary>
+            Enables or disables demodulating the received signal.
+            </summary>
+            <remarks>
+            This configuration is not available on the base ESP32 target and will be ignored. Please refer to the ESP32 IDF docs for more information on feature availability for the various ESP32 targets.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.CarrierWaveFrequency">
+            <summary>
+            Gets or sets the carrier wave frequency. Only applicable when <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.EnableDemodulation"/> is set to <see langword="true" />.
+            </summary>
+            <remarks>
+            This configuration is not available on the base ESP32 target and will be ignored. Please refer to the ESP32 IDF docs for more information on feature availability for the various ESP32 targets.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.CarrierWaveDutyPercentage">
+            <summary>
+            Gets or sets the carrier wave duty cycle percentage. Only applicable when <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.EnableDemodulation"/> is set to <see langword="true" />.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Value cannot be less that 1 or greater than 100.</exception>
+            <remarks>
+            This configuration is not available on the base ESP32 target and will be ignored. Please refer to the ESP32 IDF docs for more information on feature availability for the various ESP32 targets.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.CarrierLevel">
+            <summary>
+            Gets or sets a value indicating at which level of RMT output is the carrier wave applied. Only applicable when <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.EnableDemodulation"/> is set to <see langword="true" />.
+            <see langword="true" /> = HIGH.
+            </summary>
+            <remarks>
+            This configuration is not available on the base ESP32 target and will be ignored. Please refer to the ESP32 IDF docs for more information on feature availability for the various ESP32 targets.
+            </remarks>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings"/> class.
+            </summary>
+            <param name="pinNumber">The GPIO Pin number to use with the channel.</param>
+            <remarks>This constructor will use the next available RMT channel starting from channel 0 and up to channel 7.</remarks>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings"/> class.
+            </summary>
+            <param name="channel">The channel number to use. Valid value range is 0 to 7 (inclusive).</param>
+            <param name="pinNumber">The GPIO Pin number to use with the channel.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="channel"/> must be between 0 and 7.</exception>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.#ctor(nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings"/> class by copying values from the other <see cref="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings"/> instance specified.
+            </summary>
+            <param name="other">The other <see cref="T:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings"/> to copy values from.</param>
+        </member>
+        <member name="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannel">
+            <summary>
+            Base class for a RMT channel
+            </summary>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.RmtChannel._settings">
+            <summary>
+            The <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannel"/> settings instance.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannel.Mode">
+            <summary>
+            Gets the current <see cref="T:nanoFramework.Hardware.Esp32.Rmt.ChannelMode"/> for this instance.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannel.Channel">
+            <summary>
+            Gets the channel number for this instance.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannel.Pin">
+            <summary>
+            Gets or sets the GPIO pin used with the current channel.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannel.SourceClock">
+            <summary>
+            Gets the source clock. Only the 80MHz APB clock is currently supported so the value will always be <see cref="F:nanoFramework.Hardware.Esp32.Rmt.SourceClock.APB"/> in the current implementation.
+            </summary>
+            <remarks>
+            ESP IDF v4.4.3 supports only <see cref="F:nanoFramework.Hardware.Esp32.Rmt.SourceClock.APB"/>. This property cannot be changed.
+            </remarks>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannel.ClockDivider">
+            <summary>
+            The value can be between 1 and 255.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannel.NumberOfMemoryBlocks">
+            <summary>
+            Gets or sets the number of memory blocks available to the current channel.
+            </summary>
+            <remarks>
+            This function is used to configure the amount of memory blocks allocated to a channel.
+            The 8 channels share a 512x32-bit RAM block which can be read and written by the processor cores over the APB bus,
+            as well as read by the transmitters and written by the receivers.
+            This means that every channel gets a single memory block equaling 64x32-bit.
+            If memory block number of one channel is set to a value greater than 1, this channel will occupy the memory block of the next channel.
+            Channel 0 can use at most 8 blocks of memory, accordingly channel 7 can only use one memory block.
+            </remarks>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.RmtChannel.#ctor(nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannel"/> class.
+            </summary>
+            <param name="settings">A <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings"/> instance to configure the channel.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="settings"/> cannot be null.</exception>
+        </member>
+        <member name="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings">
+            <summary>
+            Base class for shared RMT Channel settings.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.Channel">
+            <summary>
+            Gets or sets the channel number.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Value cannot be less than 0 or more than 7.</exception>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.PinNumber">
+            <summary>
+            Gets or sets the GPIO pin number to be used with the specified channel.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Value cannot be less than 0.</exception>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.ClockDivider">
+            <summary>
+            Gets or sets the clock divider value.
+            </summary>
+            <remarks>
+            ESP IDF v4.4.3 only supports the APB bus clock @ 80Mhz.
+            The default value for the divider is 80 (80Mhz / 80 = 1Mhz = 1us ticks).
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">Value cannot be less than 1.</exception>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.NumberOfMemoryBlocks">
+            <summary>
+            Gets or sets the number of memory blocks available to the current channel.
+            </summary>
+            <remarks>
+            This function is used to configure the amount of memory blocks allocated to a channel.
+            The 8 channels share a 512x32-bit RAM block which can be read and written by the processor cores over the APB bus,
+            as well as read by the transmitters and written by the receivers.
+            This means that every channel gets a single memory block equaling 64x32-bit.
+            If memory block number of one channel is set to a value greater than 1, this channel will occupy the memory block of the next channel.
+            Channel 0 can use at most 8 blocks of memory, accordingly channel 7 can only use one memory block.
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">Value cannot be 0 or more than 8.</exception>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.BufferSize">
+            <summary>
+            Gets or sets the RMT Ring Buffer size.
+            </summary>
+            <remarks>
+            The ring buffer is available in transmit and receive channels.
+            For receive channels, Incoming <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtCommand"/>s are moved to the ring buffer after the <see cref="P:nanoFramework.Hardware.Esp32.Rmt.ReceiverChannelSettings.IdleThreshold"/> has lapsed.
+            For transmit channels, <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtCommand"/>s are automatically copied over to the channel's memory block and written to the transmitter.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.SignalInverterEnabled">
+            <summary>
+            Gets or sets a value indicating if the RMT module should invert the incoming/outgoing signal.
+            </summary>
+            <remarks>This works like an external inverter connected to the GPIO of certain RMT channel.</remarks>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings"/> class.
+            </summary>
+            <param name="pinNumber">The GPIO Pin number to use with the channel.</param>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings"/> class.
+            </summary>
+            <param name="channel">The channel number to use. Valid value range is 0 to 7 (inclusive).</param>
+            <param name="pinNumber">The GPIO Pin number to use with the channel.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="channel"/> must be between 0 and 7.</exception>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings.#ctor(nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings"/> class by copying values from the other <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings"/> instance specified.
+            </summary>
+            <param name="other">The other <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtChannelSettings"/> to copy values from.</param>
+        </member>
+        <member name="T:nanoFramework.Hardware.Esp32.Rmt.SourceClock">
+            <summary>
+            Enum for source Clock types
+            </summary>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.SourceClock.APB">
+            <summary>
+             80MHz clock source.
+            </summary>
+            <remarks>
+            Currently this is the only supported mode on ESP32.
+            </remarks>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.SourceClock.REF">
+            <summary>
+            Not supported
+            </summary>
+        </member>
+        <member name="T:nanoFramework.Hardware.Esp32.Rmt.RmtCommand">
+            <summary>
+            Class to encapsulate a RMT item
+            </summary>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.RmtCommand._level0">
+            <summary>
+            Command level 1
+            </summary>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.RmtCommand._level1">
+            <summary>
+            Command level 2
+            </summary>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.RmtCommand._duration0">
+            <summary>
+            Command duration 1
+            </summary>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.RmtCommand._duration1">
+            <summary>
+            Command duration 2
+            </summary>
+        </member>
+        <member name="F:nanoFramework.Hardware.Esp32.Rmt.RmtCommand.MaxDuration">
+            <summary>
+            Max value of rmt_item32_t::durationX (15 bit unsigned value)
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.RmtCommand.#ctor(System.UInt16,System.Boolean,System.UInt16,System.Boolean)">
+            <summary>
+            Create new rmt command
+            </summary>
+            <param name="duration1"></param>
+            <param name="level1"></param>
+            <param name="duration2"></param>
+            <param name="level2"></param>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtCommand.Duration0">
+            <summary>
+            Level1 duration in RMT channel ticks
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtCommand.Duration1">
+            <summary>
+            Level2 duration in RMT channel ticks
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtCommand.Level0">
+            <summary>
+            Level 0 value high/low
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.RmtCommand.Level1">
+            <summary>
+            Level 1 value high/low
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.RmtCommand.CheckDuration(System.UInt16)">
+            <summary>
+            Check if the given duration exceeds max duration, Maximum supported duration is 32768
+            </summary>
+            <param name="duration"></param>
+        </member>
+        <member name="T:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings">
+            <summary>
+            <see cref="T:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel"/>'s settings class.
+            </summary>
+            <remarks>
+            All changes made to properties of this class are ignored after the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel"/> is initialized.
+            The equivalent properties in the channel instance can be used to make on-the-fly changes to the configurations.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.EnableCarrierWave">
+            <summary>
+            Enables or disables the carrier wave generator in the RMT Hardware.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.CarrierLevel">
+            <summary>
+            Gets or sets a value indicating at which level of RMT output is the carrier wave applied.
+            <see langword="true" /> = HIGH.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.CarrierWaveFrequency">
+            <summary>
+            Gets or sets the carrier wave frequency.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.CarrierWaveDutyPercentage">
+            <summary>
+            Gets or sets the carrier wave duty cycle percentage.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Value cannot be less that 1 or greater than 100.</exception>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.EnableLooping">
+            <summary>
+            Gets or sets a value indicating whether to enable or disable looping through the ring buffer when transmitting <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtCommand"/>s.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.LoopCount">
+            <summary>
+            Gets or sets the maximum transmission loop count. Only applicable if <see cref="P:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.EnableLooping"/> is set to <see langword="true"/>.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Value cannot be less that 1 or greater than 1023.</exception>
+            <remarks>
+            This configuration is not available on the base ESP32 target and will be ignored. Please refer to the ESP32 IDF docs for more information on feature availability for the various ESP32 targets.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.EnableIdleLevelOutput">
+            <summary>
+            Gets or sets a value indicating whether to enable or disable the idle level output.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.IdleLevel">
+            <summary>
+            Gets or sets a value indicating the RMT idle level.
+            <see langword="true" /> = HIGH.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings"/> class.
+            </summary>
+            <param name="pinNumber">The GPIO Pin number to use with the channel.</param>
+            <remarks>This constructor will use the next available RMT channel starting from channel 0 and up to channel 7.</remarks>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings"/> class.
+            </summary>
+            <param name="channel">The channel number to use. Valid value range is 0 to 7 (inclusive).</param>
+            <param name="pinNumber">The GPIO Pin number to use with the channel.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="channel"/> must be between 0 and 7.</exception>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings.#ctor(nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings"/> class by copying values from the other <see cref="T:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings"/> instance specified.
+            </summary>
+            <param name="other">The other <see cref="T:nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings"/> to copy values from.</param>
+        </member>
+        <member name="T:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel">
+            <summary>
+            A class that can be used to create and transmit RMT commands on ESP32
+            </summary>
+            <remarks>
+            For detailed explanation of ESP32 RMT Module, please check the Espressif official documentation here: https://docs.espressif.com/projects/esp-idf/en/v4.4.3/esp32/api-reference/peripherals/rmt.html
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.Mode">
+            <inheritdoc/>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.Item(System.Int32)">
+            <summary>
+            Access a command from the array of commands that will be sent
+            </summary>
+            <param name="index">Index into RMTCommand array</param>
+            <returns>RMT command from index</returns>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.IsChannelIdle">
+            <summary>
+            Gets a value indicating whether the channel is in idle mode.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.EnableLooping">
+            <summary>
+            Gets or sets a value indicating whether to enable or disable looping through the ring buffer when transmitting <see cref="T:nanoFramework.Hardware.Esp32.Rmt.RmtCommand"/>s.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.LoopCount">
+            <summary>
+            Gets or sets the maximum transmission loop count. Only applicable if <see cref="P:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.EnableLooping"/> is set to <see langword="true"/>.
+            </summary>
+            <remarks>
+            This configuration is not available on the base ESP32 target and will be ignored. Please refer to the ESP32 IDF docs for more information on feature availability for the various ESP32 targets.
+            </remarks>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.CarrierLevel">
+            <summary>
+            Gets or sets a value indicating at which level of RMT output is the carrier wave applied.
+            <see langword="true" /> = HIGH.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.IdleLevel">
+            <summary>
+            Gets or sets a value indicating the RMT idle level.
+            <see langword="true" /> = HIGH.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.#ctor(nanoFramework.Hardware.Esp32.Rmt.TransmitChannelSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel"/> class.
+            </summary>
+            <param name="settings">The channel settings to use.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="settings"/> cannot be null.</exception>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.AddCommand(nanoFramework.Hardware.Esp32.Rmt.RmtCommand)">
+            <summary>
+            Add new RMT command to the list of commands that will be sent
+            </summary>
+            <param name="cmd">RmtCommand to Add</param>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.ClearCommands">
+            <summary>
+            Clear list of commands.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.Send(System.Boolean)">
+            <summary>
+            Send the filled RMT commands to the transmitter
+            </summary>
+            <param name="waitTxDone">If true wait the TX process to end, false function returns without waiting, but if another command is send before the end of the previous process an error will occur.</param>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.SendData(System.Byte[],System.Boolean)">
+            <summary>
+            Send a RAW data to RMT module
+            </summary>
+            <param name="data">byte array of data for tx module ready for native function</param>
+            <param name="waitTxDone"></param>
+        </member>
+        <member name="M:nanoFramework.Hardware.Esp32.Rmt.TransmitterChannel.SerializeCommands">
+            <summary>
+            Serialize commands to rmt_item32_t native byte format
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

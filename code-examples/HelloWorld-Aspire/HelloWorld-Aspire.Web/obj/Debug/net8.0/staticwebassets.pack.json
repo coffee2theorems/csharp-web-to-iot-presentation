@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\git\\csharp-web-to-iot-presentation\\code-examples\\HelloWorld-Aspire\\HelloWorld-Aspire.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HelloWorld-Aspire.Web.bundle.scp.css",
+      "PackagePath": "staticwebassets\\HelloWorld-Aspire.Web.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\git\\csharp-web-to-iot-presentation\\code-examples\\HelloWorld-Aspire\\HelloWorld-Aspire.Web\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\git\\csharp-web-to-iot-presentation\\code-examples\\HelloWorld-Aspire\\HelloWorld-Aspire.Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\git\\csharp-web-to-iot-presentation\\code-examples\\HelloWorld-Aspire\\HelloWorld-Aspire.Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\git\\csharp-web-to-iot-presentation\\code-examples\\HelloWorld-Aspire\\HelloWorld-Aspire.Web\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HelloWorld-Aspire.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HelloWorld-Aspire.Web.props",
+      "PackagePath": "build\\HelloWorld-Aspire.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HelloWorld-Aspire.Web.props",
+      "PackagePath": "buildMultiTargeting\\HelloWorld-Aspire.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HelloWorld-Aspire.Web.props",
+      "PackagePath": "buildTransitive\\HelloWorld-Aspire.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

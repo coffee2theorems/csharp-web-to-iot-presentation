@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Iot.Device.Ws28xx.Esp32</name>
+    </assembly>
+    <members>
+        <member name="T:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808Grb">
+            <summary>
+            BitmapImage Ws2808 GRB.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808Grb.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808Grb"/> class.
+            </summary>
+            <param name="width">Width of the image.</param>
+            <param name="height">Height of the image.</param>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808Grb.SetPixel(System.Int32,System.Int32,System.Drawing.Color)">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808Grb.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte)">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808Grb.Clear">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808Grb.Clear(System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.BitmapImage">
+            <summary>
+            Represents bitmap image.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImage.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the<see cref="T:Iot.Device.Ws28xx.Esp32.BitmapImage" /> class.
+            </summary>
+            <param name="data">Data representing the image (derived class defines a specific format).</param>
+            <param name="width">Width of the image.</param>
+            <param name="height">Height of the image.</param>
+            <param name="stride">Number of bytes per row.</param>
+        </member>
+        <member name="P:Iot.Device.Ws28xx.Esp32.BitmapImage.Data">
+            <summary>
+            Data related to the image (derived class defines a specific format).
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ws28xx.Esp32.BitmapImage.Width">
+            <summary>
+            Gets width of the image.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ws28xx.Esp32.BitmapImage.Height">
+            <summary>
+            Getsd height of the image.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ws28xx.Esp32.BitmapImage.Stride">
+            <summary>
+            Gets number of bytes per row.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImage.SetPixel(System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Sets pixel at specific position.
+            </summary>
+            <param name="x">X coordinate of the pixel.</param>
+            <param name="y">Y coordinate of the pixel.</param>
+            <param name="color">Color to set the pixel to.</param>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImage.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Sets pixel at specific position.
+            </summary>
+            <param name="x">X coordinate of the pixel.</param>
+            <param name="y">Y coordinate of the pixel.</param>
+            <param name="r">Red color.</param>
+            <param name="g">Green color.</param>
+            <param name="b">Blue color.</param>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImage.Clear(System.Drawing.Color)">
+            <summary>
+            Clears the image to specific color.
+            </summary>
+            <param name="color">Color to clear the image. Defaults to black.</param>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImage.Clear">
+            <summary>
+            Clears whole image.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImage.Clear(System.Int32,System.Int32)">
+            <summary>
+            Clears selected pixel.
+            </summary>
+            <param name="x">X pixel.</param>
+            <param name="y">Y pixel.</param>
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3">
+            <summary>
+            Special 24bit RGB format for Neo pixel LEDs where each bit is converted to 3 bits.
+            A one is converted to 110, a zero is converted to 100.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3.BytesPerComponent">
+            <summary>
+            The number of bytes per component.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3.BytesPerPixel">
+            <summary>
+            The number of bytes per pixel.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3"/> class.
+            </summary>
+            <param name="width">Width of the image.</param>
+            <param name="height">Height of the image.</param>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3.SetPixel(System.Int32,System.Int32,System.Drawing.Color)">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3.Clear(System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3.Clear">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte)">
+            <inheritdoc />
+        </member>
+        <member name="F:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3.Lookup">
+            <summary>
+            Lookup table for color conversion.
+            </summary>
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3Rgb">
+            <summary>
+            Special 24bit RGB format for Neo pixel LEDs where each bit is converted to 3 bits.
+            A one is converted to 110, a zero is converted to 100.
+            </summary>
+            <seealso cref="!:Iot.Device.Ws28xx.BitmapImageNeo3" />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3Rgb.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3Rgb"/> class.
+            </summary>
+            <param name="width">Width of the image.</param>
+            <param name="height">Height of the image.</param>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo3Rgb.SetPixel(System.Int32,System.Int32,System.Drawing.Color)">
+            <inheritdoc />
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.BitmapImageNeo4">
+            <summary>
+            BitmapImage Neo4.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ws28xx.Esp32.BitmapImageNeo4.BytesPerComponent">
+            <summary>
+            The number of bytes per component.
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ws28xx.Esp32.BitmapImageNeo4.BytesPerPixel">
+            <summary>
+            The number of bytes per pixel.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo4.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.BitmapImageNeo4"/> class.
+            </summary>
+            <param name="width">Width of the image.</param>
+            <param name="height">Height of the image.</param>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo4.Clear">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo4.Clear(System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo4.SetPixel(System.Int32,System.Int32,System.Drawing.Color)">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageNeo4.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte)">
+            <inheritdoc />
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808">
+            <summary>
+            BitmapImage Ws2808.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808"/> class.
+            </summary>
+            <param name="width">Width of the image.</param>
+            <param name="height">Height of the image.</param>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808.SetPixel(System.Int32,System.Int32,System.Drawing.Color)">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte)">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808.Clear">
+            <inheritdoc />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.BitmapImageWs2808.Clear(System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.Sk6812">
+            <summary>
+            Represents the SK6812 Driver.
+            </summary>
+            <seealso cref="!:Iot.Device.Ws28xx.Ws28xx" />
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.Sk6812.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.Sk6812"/> class.
+            </summary>
+            <param name="gpioPin">The GPIO pin used for communication with the LED driver.</param>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.Ws2808">
+            <summary>
+            Represents WS2808 LED driver.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.Ws2808.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.Ws2808" /> class.
+            </summary>
+            <param name="gpioPin">The GPIO pin used for communication with the LED driver.</param>
+            <param name="width">Width of the screen or LED strip.</param>
+            <param name="height">Height of the screen or LED strip. Defaults to 1 (LED strip).</param>
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.Ws2812b">
+            <summary>
+            Represents WS2812B LED driver.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.Ws2812b.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.Ws2812b" /> class.
+            </summary>
+            <param name="gpioPin">The GPIO pin used for communication with the LED driver.</param>
+            <param name="width">Width of the screen or LED strip.</param>
+            <param name="height">Height of the screen or LED strip. Defaults to 1 (LED strip).</param>
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.Ws2812c">
+            <summary>
+            Represents WS2815B LED driver.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.Ws2812c.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.Ws2812c" /> class.
+            </summary>
+            <remarks>In contrast to <see cref="T:Iot.Device.Ws28xx.Esp32.Ws2812b"/> this constructor changes the order of the color values.</remarks>
+            <param name="gpioPin">The GPIO pin used for communication with the LED driver.</param>
+            <param name="width">Width of the screen or LED strip.</param>
+            <param name="height">Height of the screen or LED strip. Defaults to 1 (LED strip).</param>
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.Ws2815b">
+            <summary>
+            Represents WS2815B LED driver.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.Ws2815b.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.Ws2815b" /> class.
+            </summary>
+            <remarks>In contrast to <see cref="T:Iot.Device.Ws28xx.Esp32.Ws2812b"/> this constructor changes the order of the color values.</remarks>
+            <param name="gpioPin">The GPIO pin used for communication with the LED driver.</param>
+            <param name="width">Width of the screen or LED strip.</param>
+            <param name="height">Height of the screen or LED strip. Defaults to 1 (LED strip).</param>
+        </member>
+        <member name="T:Iot.Device.Ws28xx.Esp32.Ws28xx">
+            <summary>
+            Represents base class for WS28XX LED drivers (i.e. WS2812B or WS2808).
+            </summary>
+        </member>
+        <member name="F:Iot.Device.Ws28xx.Esp32.Ws28xx.GpioPin">
+            <summary>
+            SPI device used for communication with the LED driver.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ws28xx.Esp32.Ws28xx.OnePulse">
+            <summary>
+            Gets or sets the One pulse command.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ws28xx.Esp32.Ws28xx.ZeroPulse">
+            <summary>
+            Gets or sets the zero pulse command.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ws28xx.Esp32.Ws28xx.ResetCommand">
+            <summary>
+            Gets or sets the reset command.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ws28xx.Esp32.Ws28xx.ClockDivider">
+            <summary>
+            Gets or sets the clock divider.
+            </summary>
+        </member>
+        <member name="P:Iot.Device.Ws28xx.Esp32.Ws28xx.Image">
+            <summary>
+            Gets backing image to be updated on the driver.
+            </summary>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.Ws28xx.#ctor(System.Int32,Iot.Device.Ws28xx.Esp32.BitmapImage)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Ws28xx.Esp32.Ws28xx" /> class.
+            </summary>
+            <param name="gpioPin">The GPIO pin used for communication with the LED driver.</param>
+            <param name="image">The bitmap that represents the screen or led strip.</param>
+        </member>
+        <member name="M:Iot.Device.Ws28xx.Esp32.Ws28xx.Update">
+            <summary>
+            Sends backing image to the LED driver.
+            </summary>
+        </member>
+    </members>
+</doc>

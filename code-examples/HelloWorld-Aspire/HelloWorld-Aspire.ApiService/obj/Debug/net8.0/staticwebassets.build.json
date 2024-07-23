@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6N31pwombYjwhjt4+6IM3EdCt0FguYuJj+PAzs3cmWw=",
+  "Source": "HelloWorld-Aspire.ApiService",
+  "BasePath": "_content/HelloWorld-Aspire.ApiService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

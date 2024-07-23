@@ -1,0 +1,1970 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>nanoFramework.Graphics.Core</name>
+    </assembly>
+    <members>
+        <member name="T:System.Drawing.ColorOrder">
+            <summary>
+            Enum for specifying the order in which color components are arranged in a pixel.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ColorOrder.Rgb">
+            <summary>
+            Red-Green-Blue (RGB) order.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ColorOrder.Bgr">
+            <summary>
+            Blue-Green-Red (BGR) order.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ColorOrder.Brg">
+            <summary>
+            Blue-Red-Green (BRG) order.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ColorOrder.Gbr">
+            <summary>
+            Green-Blue-Red (GBR) order.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ColorOrder.Rbg">
+            <summary>
+            Red-Blue-Green (RBG) order.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ColorOrder.Grb">
+            <summary>
+            Green-Red-Blue (GRB) order.
+            </summary>
+        </member>
+        <member name="T:System.Drawing.Color">
+            <summary>
+            Represents an ARGB (alpha, red, green, blue) color.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Color.MediumAquamarine">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF66CDAA.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MediumBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF0000CD.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MediumOrchid">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFBA55D3.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MediumPurple">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF9370DB.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MediumSeaGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF3CB371.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MediumSlateBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF7B68EE.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MediumSpringGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF00FA9A.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Maroon">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF800000.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MediumTurquoise">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF48D1CC.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MidnightBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF191970.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MintCream">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF5FFFA.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MistyRose">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFE4E1.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Moccasin">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFE4B5.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.NavajoWhite">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFDEAD.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Navy">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF000080.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.OldLace">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFDF5E6.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.MediumVioletRed">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFC71585.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Magenta">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFF00FF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Linen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFAF0E6.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LimeGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF32CD32.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LavenderBlush">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFF0F5.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LawnGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF7CFC00.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LemonChiffon">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFFACD.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFADD8E6.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightCoral">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF08080.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightCyan">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFE0FFFF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightGoldenrodYellow">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFAFAD2.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightGray">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFD3D3D3.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF90EE90.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightPink">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFB6C1.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightSalmon">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFA07A.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightSeaGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF20B2AA.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightSkyBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF87CEFA.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightSlateGray">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF778899.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightSteelBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFB0C4DE.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.LightYellow">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFFFE0.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Lime">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF00FF00.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Olive">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF808000.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.OliveDrab">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF6B8E23.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Orange">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFA500.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.OrangeRed">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFF4500.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Silver">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFC0C0C0.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.SkyBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF87CEEB.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.SlateBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF6A5ACD.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.SlateGray">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF708090.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Snow">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFFAFA.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.SpringGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF00FF7F.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.SteelBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF4682B4.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Tan">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFD2B48C.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Teal">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF008080.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Thistle">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFD8BFD8.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Tomato">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFF6347.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Transparent">
+            <summary>
+            Gets a system-defined color.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Turquoise">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF40E0D0.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Violet">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFEE82EE.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Wheat">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF5DEB3.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.White">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFFFFF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.WhiteSmoke">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF5F5F5.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Sienna">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFA0522D.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Lavender">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFE6E6FA.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.SeaShell">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFF5EE.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.SandyBrown">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF4A460.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Orchid">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFDA70D6.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.PaleGoldenrod">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFEEE8AA.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.PaleGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF98FB98.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.PaleTurquoise">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFAFEEEE.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.PaleVioletRed">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFDB7093.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.PapayaWhip">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFEFD5.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.PeachPuff">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFDAB9.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Peru">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFCD853F.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Pink">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFC0CB.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Plum">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFDDA0DD.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.PowderBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFB0E0E6.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Purple">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF800080.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Red">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFF0000.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.RosyBrown">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFBC8F8F.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.RoyalBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF4169E1.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.SaddleBrown">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF8B4513.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Salmon">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFA8072.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.SeaGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF2E8B57.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Yellow">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFFF00.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Khaki">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF0E68C.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Cyan">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF00FFFF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkMagenta">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF8B008B.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkKhaki">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFBDB76B.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF006400.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkGray">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFA9A9A9.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkGoldenrod">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFB8860B.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkCyan">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF008B8B.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF00008B.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Ivory">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFFFF0.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Crimson">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFDC143C.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Cornsilk">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFF8DC.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.CornflowerBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF6495ED.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Coral">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFF7F50.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Chocolate">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFD2691E.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkOliveGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF556B2F.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Chartreuse">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF7FFF00.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.BurlyWood">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFDEB887.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Brown">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFA52A2A.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.BlueViolet">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF8A2BE2.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Blue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF0000FF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.BlanchedAlmond">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFEBCD.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Black">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF000000.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Bisque">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFE4C4.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Beige">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF5F5DC.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Azure">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF0FFFF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Aquamarine">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF7FFFD4.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Aqua">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF00FFFF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.AntiqueWhite">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFAEBD7.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.AliceBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF0F8FF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.CadetBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF5F9EA0.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkOrange">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFF8C00.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.YellowGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF9ACD32.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkRed">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF8B0000.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Indigo">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF4B0082.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.IndianRed">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFCD5C5C.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkOrchid">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF9932CC.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Honeydew">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF0FFF0.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.GreenYellow">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFADFF2F.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Green">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF008000.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Gray">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF808080.
+            </summary>
+            <returns>
+            A System.Drawing.Color structure representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Goldenrod">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFDAA520.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Gold">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFD700.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.GhostWhite">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFF8F8FF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Gainsboro">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFDCDCDC.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Fuchsia">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFF00FF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.ForestGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF228B22.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.HotPink">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFF69B4.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.Firebrick">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFB22222.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.FloralWhite">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFFFAF0.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DodgerBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF1E90FF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DimGray">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF696969.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DeepSkyBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF00BFFF.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DeepPink">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFFF1493.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkViolet">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF9400D3.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkTurquoise">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF00CED1.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkSlateGray">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF2F4F4F.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkSlateBlue">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF483D8B.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkSeaGreen">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FF8FBC8B.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.DarkSalmon">
+            <summary>
+            Gets a system-defined color that has an ARGB value of #FFE9967A.
+            </summary>
+            <returns>
+            A System.Drawing.Color representing a system-defined color.
+            </returns>
+        </member>
+        <member name="P:System.Drawing.Color.A">
+            <summary>
+            Gets the alpha component value of this <see cref="T:System.Drawing.Color"/> structure.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Color.B">
+            <summary>
+            Gets the blue component value of this <see cref="T:System.Drawing.Color"/> structure.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Color.R">
+            <summary>
+            Gets the red component value of this <see cref="T:System.Drawing.Color"/> structure.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Color.G">
+            <summary>
+            Gets the green component value of this <see cref="T:System.Drawing.Color"/> structure.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a System.Drawing.Color structure from the specified 8-bit color values
+            (red, green, and blue). The alpha value is implicitly 255 (fully opaque). Although
+            this method allows a 32-bit value to be passed for each color component, the
+            value of each component is limited to 8 bits.
+            </summary>
+            <param name="r">The red component value for the new System.Drawing.Color. Valid values are 0 through 255.</param>
+            <param name="g">The green component value for the new System.Drawing.Color. Valid values are 0 through 255.</param>
+            <param name="b">The blue component value for the new System.Drawing.Color. Valid values are 0 through 255.</param>
+            <returns>The System.Drawing.Color structure that this method creates.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a System.Drawing.Color structure from the specified 8-bit color values
+            (red, green, and blue). The alpha value is implicitly 255 (fully opaque). Although
+            this method allows a 32-bit value to be passed for each color component, the
+            value of each component is limited to 8 bits.
+            </summary>
+            <param name="a">The alpha component value for the new System.Drawing.Color. Valid values are 0 through 255.</param>
+            <param name="r">The red component value for the new System.Drawing.Color. Valid values are 0 through 255.</param>
+            <param name="g">The green component value for the new System.Drawing.Color. Valid values are 0 through 255.</param>
+            <param name="b">The blue component value for the new System.Drawing.Color. Valid values are 0 through 255.</param>
+            <returns>The System.Drawing.Color structure that this method creates.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.FromArgb(System.Int32)">
+            <summary>
+            Creates a System.Drawing.Color structure from a 32-bit ARGB value.
+            </summary>
+            <param name="argb">A value specifying the 32-bit ARGB value.</param>
+            <returns>The System.Drawing.Color structure that this method creates.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.FromArgb(System.Int32,System.Drawing.Color)">
+            <summary>
+            Creates a System.Drawing.Color structure from the specified System.Drawing.Color
+            structure, but with the new specified alpha value. Although this method allows
+            a 32-bit value to be passed for the alpha value, the value is limited to 8 bits.
+            </summary>
+            <param name="alpha">The alpha value for the new System.Drawing.Color. Valid values are 0 through 255.</param>
+            <param name="baseColor">The System.Drawing.Color from which to create the new System.Drawing.Color.</param>
+            <returns>The System.Drawing.Color that this method creates.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.op_Equality(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Tests whether two specified System.Drawing.Color structures are equivalent.
+            </summary>
+            <param name="left">The System.Drawing.Color that is to the left of the equality operator.</param>
+            <param name="right">The System.Drawing.Color that is to the right of the equality operator.</param>
+            <returns>true if the two System.Drawing.Color structures are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.op_Inequality(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Tests whether two specified System.Drawing.Color structures are different.
+            </summary>
+            <param name="left">The System.Drawing.Color that is to the left of the inequality operator.</param>
+            <param name="right">The System.Drawing.Color that is to the right of the inequality operator.</param>
+            <returns>true if the two System.Drawing.Color structures are different; otherwise, false.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.ParseHexChar(System.Char)">
+            <summary>
+            Internal Helper function for ParseHex.
+            </summary>
+            <param name="intChar">Value to convert.</param>
+            <returns>Int value.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.FromHex(System.String)">
+            <summary>
+            Convert String into an Color struct.
+            </summary>
+            <param name="hexString">Color String. Allowed formats are #AARRGGBB #RRGGBB #ARGB #RGB.</param>
+            <returns>Returns an Color struct otherwise throws an exception.</returns>
+            <exception>ArgumentException or FormatException.</exception>
+        </member>
+        <member name="M:System.Drawing.Color.GetFromString(System.String)">
+            <summary>
+            Convert String with a known color name into an Color struct.
+            </summary>
+            <param name="color">The name of the color.</param>
+            <returns>A color.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.TryGetColor(System.String,System.Drawing.Color@)">
+            <summary>
+            Tries to convert a string into a color either from a color name either from a HEX representation.
+            </summary>
+            <param name="strColor">The string to convert.</param>
+            <param name="color">The color.</param>
+            <returns>A color.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.Equals(System.Object)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to other; otherwise, false.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.GetBrightness">
+            <summary>
+            Gets the hue-saturation-lightness (HSL) lightness value for this <see cref="T:System.Drawing.Color"/> structure.
+            </summary>
+            <returns>
+            The lightness of this <see cref="T:System.Drawing.Color"/>. The lightness ranges from 0.0 through 1.0, where 0.0 represents black and 1.0 represents white.
+            </returns>
+        </member>
+        <member name="M:System.Drawing.Color.GetHashCode">
+            <summary>
+            Returns a hash code for this System.Drawing.Color structure.
+            </summary>
+            <returns>An integer value that specifies the hash code for this System.Drawing.Color.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.GetHue">
+            <summary>
+            Gets the hue-saturation-lightness (HSL) hue value, in degrees, for this <see cref="T:System.Drawing.Color"/> structure.
+            </summary>
+            <returns>
+            The hue, in degrees, of this <see cref="T:System.Drawing.Color"/>. The hue is measured in degrees, ranging from 0.0 through 360.0, in HSL color space.
+            </returns>
+        </member>
+        <member name="M:System.Drawing.Color.GetSaturation">
+            <summary>
+            Gets the hue-saturation-lightness (HSL) saturation value for this <see cref="T:System.Drawing.Color"/> structure.
+            </summary>
+            <returns>
+            The saturation of this <see cref="T:System.Drawing.Color"/>. The saturation ranges from 0.0 through 1.0, where 0.0 is grayscale and 1.0 is the most saturated.
+            </returns>
+        </member>
+        <member name="M:System.Drawing.Color.ToArgb">
+            <summary>
+            Gets the 32-bit ARGB value of this System.Drawing.Color structure.
+            </summary>
+            <returns>The 32-bit ARGB value of this System.Drawing.Color.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.To1bpp">
+            <summary>
+            Gets a value representing this color as On/Off.
+            </summary>
+            <returns>The 1-bit-per-pixel value of the specified <see cref="T:System.Drawing.Color"/></returns>
+        </member>
+        <member name="M:System.Drawing.Color.To4bppGrayscale">
+            <summary>
+            Gets the 4-bits per pixel grayscale value of this color.
+            </summary>
+            <returns>The 4-bit-per-pixel grayscale value of the specified <see cref="T:System.Drawing.Color"/></returns>
+        </member>
+        <member name="M:System.Drawing.Color.To8bppGrayscale">
+            <summary>
+            Gets the 8-bits per pixel grayscale value of this color.
+            </summary>
+            <returns>The 8-bit-per-pixel grayscale value of the specified <see cref="T:System.Drawing.Color"/></returns>
+        </member>
+        <member name="M:System.Drawing.Color.To8bppRgb332">
+            <summary>
+            Gets the 8-bits per pixel value of this color.
+            Colors are encoded in 3 bits for red, 3 bits for green and 2 bits for blue.
+            </summary>        
+            <returns>The 8-bit-per-pixel RGB332 value of the specified <see cref="T:System.Drawing.Color"/></returns>
+        </member>
+        <member name="M:System.Drawing.Color.To12bppRgb444">
+            <summary>
+            Gets the 12-bits per pixel value of this color.
+            All color components are encoded with 4 bits.
+            </summary>
+            <returns>The 12-bit-per-pixel RGB444 value of the specified <see cref="T:System.Drawing.Color"/></returns>
+        </member>
+        <member name="M:System.Drawing.Color.ToBgr565">
+            <summary>
+            Gets a BGR565 value of this color structure.
+            </summary>
+            <returns>A BGR565 encoded color.</returns>
+        </member>
+        <member name="M:System.Drawing.Color.ToRgbFormat(System.Drawing.ColorOrder,System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Gets a RGB space color conversion in any order with any byte per color.
+            </summary>
+            <param name="order">The color order.</param>
+            <param name="numR">The number of bits for the R component.</param>
+            <param name="numG">The number of bits for the G component.</param>
+            <param name="numB">The number of bits for the B component.</param>
+            <returns>Thz space encoded color scheme with the requested number of bits per component.</returns>
+            <exception cref="T:System.ArgumentException">Not valid number of bits, it should be less or equal to 8.</exception>
+            <exception cref="T:System.ArgumentException">RGB Scheme not supported.</exception>
+        </member>
+        <member name="M:System.Drawing.Color.FromName(System.String)">
+            <summary>
+            Converts a known Color name into a Color.
+            </summary>
+            <param name="colorName">The known color name.</param>
+            <returns>The color or null if not found.</returns>
+            <exception cref="T:System.ArgumentException">Color not found.</exception>
+        </member>
+        <member name="M:System.Drawing.Color.ToString">
+            <summary>
+            Gets the color in standard HEX format
+            </summary>
+            <returns>The standard HEX string.</returns>
+        </member>
+        <member name="T:System.Drawing.ContentAlignment">
+            <summary>
+            Specifies alignment of content on the drawing surface.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ContentAlignment.TopLeft">
+            <summary>
+            Content is vertically aligned at the top, and horizontally aligned on the left.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ContentAlignment.TopCenter">
+            <summary>
+            Content is vertically aligned at the top, and horizontally aligned at the center.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ContentAlignment.TopRight">
+            <summary>
+            Content is vertically aligned at the top, and horizontally aligned on the right.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ContentAlignment.MiddleLeft">
+            <summary>
+            Content is vertically aligned in the middle, and horizontally aligned on the left.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ContentAlignment.MiddleCenter">
+            <summary>
+            Content is vertically aligned in the middle, and horizontally aligned at the center.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ContentAlignment.MiddleRight">
+            <summary>
+            Content is vertically aligned in the middle, and horizontally aligned on the right.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ContentAlignment.BottomLeft">
+            <summary>
+            Content is vertically aligned at the bottom, and horizontally aligned on the left.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ContentAlignment.BottomCenter">
+            <summary>
+            Content is vertically aligned at the bottom, and horizontally aligned at the center.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.ContentAlignment.BottomRight">
+            <summary>
+            Content is vertically aligned at the bottom, and horizontally aligned on the right.
+            </summary>
+        </member>
+        <member name="T:System.Drawing.Point">
+            <summary>
+            Represents an ordered pair of x and y coordinates that define a point in a two-dimensional plane.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.Point.Empty">
+            <summary>
+            Creates a new instance of the <see cref='T:System.Drawing.Point'/> class with member data left uninitialized.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref='T:System.Drawing.Point'/> class with the specified coordinates.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.#ctor(System.Drawing.Size)">
+            <summary>
+            Initializes a new instance of the <see cref='T:System.Drawing.Point'/> class from a <see cref='T:System.Drawing.Size'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the Point class using coordinates specified by an integer value.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Point.IsEmpty">
+            <summary>
+            Gets a value indicating whether this <see cref='T:System.Drawing.Point'/> is empty.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Point.X">
+            <summary>
+            Gets the x-coordinate of this <see cref='T:System.Drawing.Point'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Point.Y">
+            <summary>
+            Gets the y-coordinate of this <see cref='T:System.Drawing.Point'/>.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.op_Explicit(System.Drawing.Point)~System.Drawing.Size">
+            <summary>
+            Creates a <see cref='T:System.Drawing.Size'/> with the coordinates of the specified <see cref='T:System.Drawing.Point'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.op_Addition(System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            Translates a <see cref='T:System.Drawing.Point'/> by a given <see cref='T:System.Drawing.Size'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.op_Subtraction(System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            Translates a <see cref='T:System.Drawing.Point'/> by the negative of a given <see cref='T:System.Drawing.Size'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.op_Equality(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Compares two <see cref='T:System.Drawing.Point'/> objects. The result specifies whether the values of the
+            <see cref='P:System.Drawing.Point.X'/> and <see cref='P:System.Drawing.Point.Y'/> properties of the two
+            <see cref='T:System.Drawing.Point'/> objects are equal.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.op_Inequality(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Compares two <see cref='T:System.Drawing.Point'/> objects. The result specifies whether the values of the
+            <see cref='P:System.Drawing.Point.X'/> or <see cref='P:System.Drawing.Point.Y'/> properties of the two
+            <see cref='T:System.Drawing.Point'/>  objects are unequal.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.Add(System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            Translates a <see cref='T:System.Drawing.Point'/> by a given <see cref='T:System.Drawing.Size'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.Subtract(System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            Translates a <see cref='T:System.Drawing.Point'/> by the negative of a given <see cref='T:System.Drawing.Size'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.Equals(System.Object)">
+            <summary>
+            Specifies whether this <see cref='T:System.Drawing.Point'/> contains the same coordinates as the specified
+            <see cref='T:System.Object'/>.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.Equals(System.Drawing.Point)">
+            <summary>
+            Specifies whether this <see cref='T:System.Drawing.Point'/> contains the same coordinates as the specified <see cref="T:System.Drawing.Point"/>
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.GetHashCode">
+            <summary>
+            Returns a hash code.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.Offset(System.Int32,System.Int32)">
+            <summary>
+            Translates this <see cref='T:System.Drawing.Point'/> by the specified amount.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.Offset(System.Drawing.Point)">
+            <summary>
+            Translates this <see cref='T:System.Drawing.Point'/> by the specified amount.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Point.ToString">
+            <summary>
+            Converts this <see cref='T:System.Drawing.Point'/> to a human readable string.
+            </summary>
+        </member>
+        <member name="T:System.Drawing.Rectangle">
+            <summary>
+            Stores the location and size of a rectangular region.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.Rectangle.Empty">
+            <summary>
+            Creates a new instance of the <see cref='T:System.Drawing.Rectangle'/> class with member data left uninitialized.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref='T:System.Drawing.Rectangle'/> class with the specified location
+            and size.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.#ctor(System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            Initializes a new instance of the Rectangle class with the specified location and size.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new <see cref='T:System.Drawing.Rectangle'/> with the specified location and size.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.Location">
+            <summary>
+            Gets or sets the coordinates of the upper-left corner of the rectangular region represented by this
+            <see cref='T:System.Drawing.Rectangle'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.Size">
+            <summary>
+            Gets or sets the size of this <see cref='T:System.Drawing.Rectangle'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.X">
+            <summary>
+            Gets or sets the x-coordinate of the upper-left corner of the rectangular region defined by this
+            <see cref='T:System.Drawing.Rectangle'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.Y">
+            <summary>
+            Gets or sets the y-coordinate of the upper-left corner of the rectangular region defined by this
+            <see cref='T:System.Drawing.Rectangle'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.Width">
+            <summary>
+            Gets or sets the width of the rectangular region defined by this <see cref='T:System.Drawing.Rectangle'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.Height">
+            <summary>
+            Gets or sets the width of the rectangular region defined by this <see cref='T:System.Drawing.Rectangle'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.Left">
+            <summary>
+            Gets the x-coordinate of the upper-left corner of the rectangular region defined by this
+            <see cref='T:System.Drawing.Rectangle'/> .
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.Top">
+            <summary>
+            Gets the y-coordinate of the upper-left corner of the rectangular region defined by this
+            <see cref='T:System.Drawing.Rectangle'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.Right">
+            <summary>
+            Gets the x-coordinate of the lower-right corner of the rectangular region defined by this
+            <see cref='T:System.Drawing.Rectangle'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.Bottom">
+            <summary>
+            Gets the y-coordinate of the lower-right corner of the rectangular region defined by this
+            <see cref='T:System.Drawing.Rectangle'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Rectangle.IsEmpty">
+            <summary>
+            Tests whether this <see cref='T:System.Drawing.Rectangle'/> has a <see cref='P:System.Drawing.Rectangle.Width'/>
+            or a <see cref='P:System.Drawing.Rectangle.Height'/> of 0.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Equals(System.Object)">
+            <summary>
+            Tests whether <paramref name="other"/> is a <see cref='T:System.Drawing.Rectangle'/> with the same location
+            and size of this Rectangle.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Equals(System.Drawing.Rectangle)">
+            <summary>
+            Tests whether <paramref name="other"/> has the same location and size of this Rectangle.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.op_Equality(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Tests whether two <see cref='T:System.Drawing.Rectangle'/> objects have equal location and size.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.op_Inequality(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Tests whether two <see cref='T:System.Drawing.Rectangle'/> objects differ in location or size.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Contains(System.Int32,System.Int32)">
+            <summary>
+            Determines if the specified point is contained within the rectangular region defined by this
+            <see cref='T:System.Drawing.Rectangle'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Contains(System.Drawing.Point)">
+            <summary>
+            Determines if the specified point is contained within the rectangular region defined by this
+            <see cref='T:System.Drawing.Rectangle'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Contains(System.Drawing.Rectangle)">
+            <summary>
+            Determines if the rectangular region represented by <paramref name="rect"/> is entirely contained within the
+            rectangular region represented by this <see cref='T:System.Drawing.Rectangle'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Inflate(System.Int32,System.Int32)">
+            <summary>
+            Inflates this <see cref='T:System.Drawing.Rectangle'/> by the specified amount.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Inflate(System.Drawing.Size)">
+            <summary>
+            Inflates this <see cref='T:System.Drawing.Rectangle'/> by the specified amount.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Inflate(System.Drawing.Rectangle,System.Int32,System.Int32)">
+            <summary>
+            Creates a <see cref='T:System.Drawing.Rectangle'/> that is inflated by the specified amount.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Intersect(System.Drawing.Rectangle)">
+            <summary>
+            Creates a Rectangle that represents the intersection between this Rectangle and rect.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Intersect(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Creates a rectangle that represents the intersection between a and b. If there is no intersection, an
+            empty rectangle is returned.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.IntersectsWith(System.Drawing.Rectangle)">
+            <summary>
+            Determines if this rectangle intersects with rect.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Union(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            Creates a rectangle that represents the union between a and b.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Offset(System.Drawing.Point)">
+            <summary>
+            Adjusts the location of this rectangle by the specified amount.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.Offset(System.Int32,System.Int32)">
+            <summary>
+            Adjusts the location of this rectangle by the specified amount.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Rectangle.ToString">
+            <summary>
+            Converts the attributes of this <see cref='T:System.Drawing.Rectangle'/> to a human readable string.
+            </summary>
+        </member>
+        <member name="T:System.Drawing.Size">
+            <summary>
+            Represents the size of a rectangular region with an ordered pair of width and height.
+            </summary>
+        </member>
+        <member name="F:System.Drawing.Size.Empty">
+            <summary>
+            Initializes a new instance of the <see cref='T:System.Drawing.Size'/> class.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.#ctor(System.Drawing.Point)">
+            <summary>
+            Initializes a new instance of the <see cref='T:System.Drawing.Size'/> class from the specified
+            <see cref='T:System.Drawing.Point'/>.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref='T:System.Drawing.Size'/> class from the specified dimensions.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.op_Addition(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Performs vector addition of two <see cref='T:System.Drawing.Size'/> objects.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.op_Subtraction(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Contracts a <see cref='T:System.Drawing.Size'/> by another <see cref='T:System.Drawing.Size'/>
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.op_Multiply(System.Int32,System.Drawing.Size)">
+            <summary>
+            Multiplies a <see cref="T:System.Drawing.Size"/> by an <see cref="T:System.Int32"/> producing <see cref="T:System.Drawing.Size"/>.
+            </summary>
+            <param name="left">Multiplier of type <see cref="T:System.Int32"/>.</param>
+            <param name="right">Multiplicand of type <see cref="T:System.Drawing.Size"/>.</param>
+            <returns>Product of type <see cref="T:System.Drawing.Size"/>.</returns>
+        </member>
+        <member name="M:System.Drawing.Size.op_Multiply(System.Drawing.Size,System.Int32)">
+            <summary>
+            Multiplies <see cref="T:System.Drawing.Size"/> by an <see cref="T:System.Int32"/> producing <see cref="T:System.Drawing.Size"/>.
+            </summary>
+            <param name="left">Multiplicand of type <see cref="T:System.Drawing.Size"/>.</param>
+            <param name="right">Multiplier of type <see cref="T:System.Int32"/>.</param>
+            <returns>Product of type <see cref="T:System.Drawing.Size"/>.</returns>
+        </member>
+        <member name="M:System.Drawing.Size.op_Division(System.Drawing.Size,System.Int32)">
+            <summary>
+            Divides <see cref="T:System.Drawing.Size"/> by an <see cref="T:System.Int32"/> producing <see cref="T:System.Drawing.Size"/>.
+            </summary>
+            <param name="left">Dividend of type <see cref="T:System.Drawing.Size"/>.</param>
+            <param name="right">Divisor of type <see cref="T:System.Int32"/>.</param>
+            <returns>Result of type <see cref="T:System.Drawing.Size"/>.</returns>
+        </member>
+        <member name="M:System.Drawing.Size.op_Equality(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Tests whether two <see cref='T:System.Drawing.Size'/> objects are identical.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.op_Inequality(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Tests whether two <see cref='T:System.Drawing.Size'/> objects are different.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.op_Explicit(System.Drawing.Size)~System.Drawing.Point">
+            <summary>
+            Converts the specified <see cref='T:System.Drawing.Size'/> to a <see cref='T:System.Drawing.Point'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Size.IsEmpty">
+            <summary>
+            Tests whether this <see cref='T:System.Drawing.Size'/> has zero width and height.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Size.Width">
+            <summary>
+            Represents the horizontal component of this <see cref='T:System.Drawing.Size'/>.
+            </summary>
+        </member>
+        <member name="P:System.Drawing.Size.Height">
+            <summary>
+            Represents the vertical component of this <see cref='T:System.Drawing.Size'/>.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.Add(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Performs vector addition of two <see cref='T:System.Drawing.Size'/> objects.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.Subtract(System.Drawing.Size,System.Drawing.Size)">
+            <summary>
+            Contracts a <see cref='T:System.Drawing.Size'/> by another <see cref='T:System.Drawing.Size'/> .
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.Equals(System.Object)">
+            <summary>
+            Tests to see whether the specified object is a <see cref='T:System.Drawing.Size'/>  with the same dimensions
+            as this <see cref='T:System.Drawing.Size'/>.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.Equals(System.Drawing.Size)">
+            <summary>
+            Tests to see whether the specified object is a <see cref='T:System.Drawing.Size'/>  with the same dimensions
+            as this <see cref='T:System.Drawing.Size'/>.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.GetHashCode">
+            <summary>
+            Returns a hash code.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.ToString">
+            <summary>
+            Creates a human-readable string that represents this <see cref='T:System.Drawing.Size'/>.
+            </summary>
+        </member>
+        <member name="M:System.Drawing.Size.Multiply(System.Drawing.Size,System.Int32)">
+            <summary>
+            Multiplies <see cref="T:System.Drawing.Size"/> by an <see cref="T:System.Int32"/> producing <see cref="T:System.Drawing.Size"/>.
+            </summary>
+            <param name="size">Multiplicand of type <see cref="T:System.Drawing.Size"/>.</param>
+            <param name="multiplier">Multiplier of type <see cref='T:System.Int32'/>.</param>
+            <returns>Product of type <see cref="T:System.Drawing.Size"/>.</returns>
+        </member>
+        <member name="T:nanoFramework.UI.DisplayOrientation">
+            <summary>
+            Display orientation. No all display drivers support every orientation.
+            </summary>
+        </member>
+        <member name="F:nanoFramework.UI.DisplayOrientation.Portrait">
+            <summary>
+            Portrait.
+            </summary>
+        </member>
+        <member name="F:nanoFramework.UI.DisplayOrientation.Portrait180">
+            <summary>
+            Portrait 180.
+            </summary>
+        </member>
+        <member name="F:nanoFramework.UI.DisplayOrientation.Landscape">
+            <summary>
+            Landscape.
+            </summary>
+        </member>
+        <member name="F:nanoFramework.UI.DisplayOrientation.Landscape180">
+            <summary>
+            Landscape 180.
+            </summary>
+        </member>
+        <member name="T:nanoFramework.UI.IFont">
+            <summary>
+            Base class for font implementation.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.UI.IFont.Width">
+            <summary>
+            Gets font width.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.UI.IFont.Height">
+            <summary>
+            Gets font height.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.UI.IFont.Item(System.Char)">
+            <summary>
+            Get the binary representation of the ASCII character from the font table.
+            </summary>
+            <param name="character">Character to look up.</param>
+            <returns>Array of bytes representing the binary bit pattern of the character.</returns>
+        </member>
+        <member name="T:nanoFramework.UI.Point">
+            <summary>
+            A point data structure to represent a position on a plane.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.UI.Point.X">
+            <summary>
+            Gets the X position for this point.
+            </summary>
+        </member>
+        <member name="P:nanoFramework.UI.Point.Y">
+            <summary>
+            Gets the Y position for this point.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.UI.Point.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:nanoFramework.UI.Point"/> struct.
+            </summary>
+            <param name="x">The X position.</param>
+            <param name="y">The Y position.</param>
+        </member>
+        <member name="F:nanoFramework.UI.Point.Zero">
+            <summary>
+            The start point (X = 0, Y = 0).
+            </summary>
+        </member>
+        <member name="M:nanoFramework.UI.Point.op_Equality(nanoFramework.UI.Point,nanoFramework.UI.Point)">
+            <summary>
+            Checks if the specified points are equivalent based on their <see cref="P:nanoFramework.UI.Point.X"/> and <see cref="P:nanoFramework.UI.Point.Y"/> values.
+            </summary>
+            <param name="point">The first to <see cref="T:nanoFramework.UI.Point"/> to check.</param>
+            <param name="other">The other <see cref="T:nanoFramework.UI.Point"/> to check.</param>
+            <returns>True if both instances are the same position.</returns>
+        </member>
+        <member name="M:nanoFramework.UI.Point.op_Inequality(nanoFramework.UI.Point,nanoFramework.UI.Point)">
+            <summary>
+            Checks if the specified points are equivalent based on their <see cref="P:nanoFramework.UI.Point.X"/> and <see cref="P:nanoFramework.UI.Point.Y"/> values.
+            </summary>
+            <param name="point">The first to <see cref="T:nanoFramework.UI.Point"/> to check.</param>
+            <param name="other">The other <see cref="T:nanoFramework.UI.Point"/> to check.</param>
+            <returns>True if one <see cref="T:nanoFramework.UI.Point"/> refers to a different position than the other.</returns>
+        </member>
+        <member name="M:nanoFramework.UI.Point.op_Addition(nanoFramework.UI.Point,nanoFramework.UI.Point)">
+            <summary>
+            Sums the <see cref="P:nanoFramework.UI.Point.X"/> and <see cref="P:nanoFramework.UI.Point.Y"/> values of the specified points.
+            </summary>
+            <param name="point">The first point.</param>
+            <param name="other">The other point.</param>
+            <returns>A new <see cref="T:nanoFramework.UI.Point"/> with the sum of <see cref="P:nanoFramework.UI.Point.X"/> and <see cref="P:nanoFramework.UI.Point.Y"/> values of the specified points.</returns>
+        </member>
+        <member name="M:nanoFramework.UI.Point.op_Subtraction(nanoFramework.UI.Point,nanoFramework.UI.Point)">
+            <summary>
+            Deducts the <see cref="P:nanoFramework.UI.Point.X"/> and <see cref="P:nanoFramework.UI.Point.Y"/> values of the specified points.
+            </summary>
+            <param name="point">The first point.</param>
+            <param name="other">The other point.</param>
+            <returns>A new <see cref="T:nanoFramework.UI.Point"/> with the deduction of <see cref="P:nanoFramework.UI.Point.X"/> and <see cref="P:nanoFramework.UI.Point.Y"/> values of the specified points.</returns>
+        </member>
+        <member name="M:nanoFramework.UI.Point.Equals(System.Object)">
+            <inheritdoc/>>
+        </member>
+        <member name="M:nanoFramework.UI.Point.GetHashCode">
+            <inheritdoc/>>
+        </member>
+    </members>
+</doc>
